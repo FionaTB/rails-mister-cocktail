@@ -9,6 +9,15 @@ Dose.destroy_all
 Cocktail.destroy_all
 Ingredient.destroy_all
 
+puts 'Creating cocktail'
+
+Cocktail.create(name: "spicy Blackberry")
+Cocktail.create(name: "mojito")
+Cocktail.create(name: "vodka lemon")
+Cocktail.create(name: "vodka sour")
+
+puts 'Creating ingredient'
+
 Ingredient.create(name: "mint")
 Ingredient.create(name: "vodka")
 Ingredient.create(name: "rhum")
@@ -19,5 +28,3 @@ Ingredient.create(name: "cayenne pepper")
 Ingredient.create(name: "tequila")
 Ingredient.create(name: "lime juice")
 Ingredient.create(name: "blackberry syrup")
-
-puts 'Creating cocktail'
