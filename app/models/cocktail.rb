@@ -1,8 +1,8 @@
 class Cocktail < ApplicationRecord
-  has_many :ingredients, :doses, dependent: :destroy
+  has_many :doses, dependent: :destroy
+  has_many :ingredients, through: :doses
 
-  NAME = ["mojito", "bloody mary", "sex on the beach", "margarita", "pina colada"]
+  # NAME = ["mojito", "bloody mary", "sex on the beach", "margarita", "pina colada"]
 
-  validates :name, uniqueness: true, presence: :true
-  validates :category, inclusion: { in: CATEGORY }
+  validates :name, uniqueness: true, presence: true
 end
